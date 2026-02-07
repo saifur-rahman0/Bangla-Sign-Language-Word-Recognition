@@ -1,0 +1,63 @@
+BdSLW401
+    |- Datasets
+    |    |- Front
+    |    |- Lateral
+    |    |- Landmarks
+    |    |   |- Front
+    |    |   |   |- W001
+    |    |   |   |- W002
+    |    |   |   |- W003
+    |    |   |   |- ....
+    |    |   |- Landmarks
+    |    |   |   |- W001
+    |    |   |   |- W002
+    |    |   |   |- W003
+    |    |   |   |- ....
+    |    |- normalized_landmarks
+    |    |   |- Front
+    |    |   |   |- W001
+    |    |   |   |- W002
+    |    |   |   |- W003
+    |    |   |   |- ....
+    |    |   |- Landmarks
+    |    |   |   |- W001
+    |    |   |   |- W002
+    |    |   |   |- W003
+    |    |   |   |- ....
+    |    |- Processed_Data
+    |    |   |- Front
+    |    |   |   |- W001
+    |    |   |   |- W002
+    |    |   |   |- W003
+    |    |   |   |- ....
+    |    |   |- Landmarks
+    |    |   |   |- W001
+    |    |   |   |- W002
+    |    |   |   |- W003
+    |    |   |   |- ....
+    |    |
+    |    |- bdsl words-complete.pdf
+    |    |- test.csv
+    |    |- train.csv
+    |    |- val.csv
+    |    |- labels.json
+    |    
+    |- api
+    |    |- app.py
+    |    |- model.py
+    | 
+    |- Models
+    |    |- lstm_bdslw401.pth
+    |    |- cnn_bilstm_attention.pth
+    |
+    |- Notebooks
+    |    |- 0_process_folders.ipynb
+    |    |- 1_extract_landmarks.ipynb
+    |    |- 2.1_visualize_landmarks.ipynb
+    |    |- 2_normalize_landmarks.ipynb
+    |    |- 3_prepare_dataset.ipynb
+    |    |- 4_train_model.ipynb
+    |    |- 4.1_trainModel_cnn_bilstm_attention.ipynb
+    |    |- 5_evaluate_model.ipynb
+    |    |- 
+    |- 
