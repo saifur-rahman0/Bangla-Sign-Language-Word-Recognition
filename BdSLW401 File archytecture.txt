@@ -1,63 +1,150 @@
 BdSLW401
     |- Datasets
     |    |- Front
+    |    |   |- Front
+    |    |       |- test
+    |    |       |   |- W001
+    |    |       |   |- W002
+    |    |       |   |- ...
+    |    |       |- train
+    |    |       |   |- W001
+    |    |       |   |- W002
+    |    |       |   |- ...
+    |    |       |- val
+    |    |           |- W001
+    |    |           |- W002
+    |    |           |- ...
     |    |- Lateral
+    |    |   |- Lateral
+    |    |       |- test
+    |    |       |   |- W001
+    |    |       |   |- W002
+    |    |       |   |- ...
+    |    |       |- train
+    |    |       |   |- W001
+    |    |       |   |- W002
+    |    |       |   |- ...
+    |    |       |- val
+    |    |           |- W001
+    |    |           |- W002
+    |    |           |- ...
     |    |- Landmarks
     |    |   |- Front
     |    |   |   |- W001
     |    |   |   |- W002
-    |    |   |   |- W003
-    |    |   |   |- ....
-    |    |   |- Landmarks
+    |    |   |   |- ...
+    |    |   |- Lateral
+    |    |       |- W001
+    |    |       |- W002
+    |    |       |- ...
+    |    |- Landmarks_Interpolated
+    |    |   |- Front
     |    |   |   |- W001
     |    |   |   |- W002
-    |    |   |   |- W003
-    |    |   |   |- ....
+    |    |   |   |- ...
+    |    |   |- Lateral
+    |    |       |- W001
+    |    |       |- W002
+    |    |       |- ...
     |    |- normalized_landmarks
     |    |   |- Front
     |    |   |   |- W001
     |    |   |   |- W002
-    |    |   |   |- W003
-    |    |   |   |- ....
-    |    |   |- Landmarks
+    |    |   |   |- ...
+    |    |   |- Lateral
+    |    |       |- W001
+    |    |       |- W002
+    |    |       |- ...
+    |    |- normalized_interploted
+    |    |   |- Front
     |    |   |   |- W001
     |    |   |   |- W002
-    |    |   |   |- W003
-    |    |   |   |- ....
+    |    |   |   |- ...
+    |    |   |- Lateral
+    |    |       |- W001
+    |    |       |- W002
+    |    |       |- ...
     |    |- Processed_Data
     |    |   |- Front
     |    |   |   |- W001
     |    |   |   |- W002
-    |    |   |   |- W003
-    |    |   |   |- ....
-    |    |   |- Landmarks
-    |    |   |   |- W001
-    |    |   |   |- W002
-    |    |   |   |- W003
-    |    |   |   |- ....
+    |    |   |   |- ...
+    |    |   |- Lateral
+    |    |       |- W001
+    |    |       |- W002
+    |    |       |- ...
     |    |
+    |    |- BdSLW401.zip
     |    |- bdsl words-complete.pdf
-    |    |- test.csv
+    |    |- label.json
     |    |- train.csv
     |    |- val.csv
-    |    |- labels.json
+    |    |- test.csv
+    |    |- train_interpolated.csv
+    |    |- val_interpolated.csv
+    |    |- test_interpolated.csv
+    |    |- train_multiview.csv
+    |    |- val_multiview.csv
+    |    |- test_multiview.csv
+    |    |- train_interpolated_multiview.csv
+    |    |- val_interpolated_multiview.csv
+    |    |- test_interpolated_multiview.csv
     |    
-    |- api
-    |    |- app.py
-    |    |- model.py
-    | 
     |- Models
-    |    |- lstm_bdslw401.pth
-    |    |- cnn_bilstm_attention.pth
+    |    |- cnn_bilstm_attention_frontveiw.pth
+    |    |- cnn_bilstm_attention_interpolated_frontveiw.pth
+    |    |- cnn_bilstm_attention_multiview.pth
+    |    |- cnn_bilstm_attention_interpolated_multiview.pth
+    |    |- transformer_frontveiw.pth
+    |    |- transformer_interpolated_frontveiw.pth
+    |    |- transformer_multiview.pth
+    |    |- transformer_interpolated_multiview.pth
     |
     |- Notebooks
     |    |- 0_process_folders.ipynb
     |    |- 1_extract_landmarks.ipynb
-    |    |- 2.1_visualize_landmarks.ipynb
+    |    |- 1.1_extract_landmarks_interpolated.ipynb
+    |    |- 1.2_extract_landmarks_interpolated_parallel.py
+    |    |- 1.3_extract_landmarks_parallel.py
     |    |- 2_normalize_landmarks.ipynb
+    |    |- 2.1_visualize_landmarks.ipynb
+    |    |- 2.2_normalize_landmarks_interpolated.ipynb
     |    |- 3_prepare_dataset.ipynb
+    |    |- 3.1_prepare_dataset_interpolated.ipynb
+    |    |- 3.2_prepare_dataset_multiview.ipynb
     |    |- 4_train_model.ipynb
-    |    |- 4.1_trainModel_cnn_bilstm_attention.ipynb
+    |    |- 4.1_cnn_bilstm_model_train.ipynb
+    |    |- 4.2_cnn_bilstm_multiview_train.ipynb
+    |    |- 4.3_transformer_multiview_train.ipynb
     |    |- 5_evaluate_model.ipynb
-    |    |- 
-    |- 
+    |    |- 5.1_evaluate_cnn_bilstm_model.ipynb
+    |    |- 5.2_evaluate_cnn_bilstm_multiview.ipynb
+    |    |- 5.3_evaluate_transformer_multiview.ipynb
+    |    |- 6.1_benchmark_frontview_models.ipynb
+    |    |- 6.2_benchmark_multiview_models.ipynb
+    |
+    |- Figures
+    |    |- Accuracy Curve of CNN BiLSTM Attention interpolated multiview.png
+    |    |- Accuracy Curve of CNN BiLSTM Attention multiview.png
+    |    |- Accuracy Curve of Transformer frontview.png
+    |    |- Accuracy Curve of Transformer interpolated multiview.png
+    |    |- Accuracy Curve of Transformer multiview.png
+    |    |- Frontview Model's Benchmark.png
+    |    |- Loss Curve of CNN BiLSTM Attention interpolated multiview.png
+    |    |- Loss Curve of CNN BiLSTM Attention multiview.png
+    |    |- Loss Curve of Transformer frontview.png
+    |    |- Loss Curve of Transformer interpolated multiview.png
+    |    |- Loss Curve of Transformer multiview.png
+    |    |- Multiview Model's Benchmark.png
+    |
+    |- api
+    |    |- app.py
+    |    |- cnn_bilstm.py
+    |    |- labels.json
+    |    |- rqe.py
+    |    |- streamlit_app.py
+    |    |- transformer.py
+    |
+    |- BdSLW401 File archytecture.txt
+    |- sample_output.mp4
+    |- test.ipynb

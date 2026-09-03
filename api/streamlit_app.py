@@ -10,9 +10,8 @@ import tempfile
 import matplotlib.pyplot as plt
 
 # Import your model architecture
-from model import CNN_BiLSTM_Attention 
+from api.transformer import CNN_BiLSTM_Attention 
 
-# ---------------- CONFIG & LOAD ----------------
 MODEL_PATH = "cnn_bilstm_attention.pth"
 LABEL_PATH = "labels.json"
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -42,7 +41,6 @@ IMPORTANT_FACE_IDX = [
     80, 81, 82, 311, 310, 415, 291, 308, 324, 318, 402, 317
 ]
 
-# ---------------- UTILS (The Missing Functions) ----------------
 
 def extract_landmarks_from_video(video_path, max_frames=MAX_FRAMES):
     cap = cv2.VideoCapture(video_path)

@@ -1,3 +1,32 @@
-*Landmarks
-*Models
-*.pth
+# Large Dataset Archives & Raw Extraction Dirs
+*.zip
+*.tar.gz
+*.7z
+Datasets/*.zip
+Datasets/Landmarks/
+Datasets/Landmarks_Interpolated/
+Datasets/Processed_Data/
+Datasets/normalized_interploted/
+Datasets/normalized_landmarks/
+Datasets/Front/
+Datasets/Lateral/
+
+# Python & Jupyter Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Environments
+env/
+venv/
+env_py310/
+.env
+
+# OS & Temp files
+.DS_Store
+Thumbs.db
+temp_*
+*.tmp
+api/temp_*
